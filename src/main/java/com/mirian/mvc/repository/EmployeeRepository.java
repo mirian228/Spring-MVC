@@ -1,0 +1,10 @@
+package com.mirian.mvc.repository;
+
+import com.mirian.mvc.model.Employee;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
+
+
+
+}
