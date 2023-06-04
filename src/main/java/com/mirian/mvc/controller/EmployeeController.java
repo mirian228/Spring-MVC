@@ -45,7 +45,7 @@ public class EmployeeController {
         return "redirect:/employees/list";
     }
 
-    @GetMapping("/showFormUpdate")
+    @GetMapping("/showFormForUpdate")
     public String showFormForUpdate(@RequestParam("employeeId") int theId, Model theModel) {
         Employee theEmployee = employeeService.findById(theId);
 
