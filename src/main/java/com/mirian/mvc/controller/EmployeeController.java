@@ -14,22 +14,20 @@ import java.util.List;
 @RequestMapping("/employees")
 public class EmployeeController {
 
-    // load employee data
 
     private List<Employee> theEmployees;
 
     @PostConstruct
     private void loadData() {
 
-        // create employees
+
         Employee emp1 = new Employee("Leslie", "Andrews", "leslie@luv2code.com");
         Employee emp2 = new Employee("Emma", "Baumgarten", "emma@luv2code.com");
         Employee emp3 = new Employee("Avani", "Gupta", "avani@luv2code.com");
 
-        // create the list
+
         theEmployees = new ArrayList<>();
 
-        // add to the list
         theEmployees.add(emp1);
         theEmployees.add(emp2);
         theEmployees.add(emp3);
@@ -40,7 +38,7 @@ public class EmployeeController {
     @GetMapping("/list")
     public String listEmployees(Model theModel) {
 
-        // add to the spring model
+
         theModel.addAttribute("employees", theEmployees);
 
         return "list-employees";
